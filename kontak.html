@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMA Negeri 9 Cirebon</title>
+
+  <!-- Jika ingin pakai file CSS terpisah, pindahkan isi <style> ke style.css dan tambahkan:
+       <link rel="stylesheet" href="style.css"> -->
+  <style type="text/css" media="all">
+    /* Reset kecil */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    a { color: inherit; }
+
+    /* Header */
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 { margin: 0; font-size: 1.5rem; }
+
+    /* Nav */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding: 10px 0;
+      background: #f4f4f4;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+
+    nav a:focus {
+      outline: 3px solid #bddffd;
+      outline-offset: 2px;
+    }
+
+    nav a.active {
+      background: #ffd54a; /* warna kuning untuk link aktif */
+      color: #111;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Hero / Kontak container */
+    .container {
+      display: flex;
+      gap: 0;
+      max-width: 900px;
+      margin: 16px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    /* Kolom kiri */
+    .kiri {
+      flex: 1;
+      padding: 30px;
+      border-right: 1px solid #eee;
+      text-align: left;
+    }
+
+    .kiri h3 { margin-top: 0; color: #333; }
+
+    .sosmed a {
+      display: block;
+      margin: 10px 0;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .sosmed a:hover,
+    .sosmed a:focus { color: #007BFF; }
+
+    /* Kolom kanan (form) */
+    .kanan {
+      flex: 1;
+      padding: 30px;
+      text-align: left;
+    }
+
+    .kanan h3 { margin-top: 0; color: #333; }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    input,
+    textarea {
+      margin-top: 6px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 3px solid rgba(0, 123, 255, 0.15);
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 14px;
+      border: none;
+      background: #007BFF;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    button:hover,
+    button:focus { background: #0056b3; }
+
+    footer {
+      background: #0d47a1;
+      color: #fff;
+      text-align: center;
+      padding: 12px 10px;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .kiri {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      nav { flex-wrap: wrap; gap: 8px; padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WELCOME TO SMA NEGERI 9 CIREBON</h1>
+  </header>
+
+  <nav aria-label="Navigasi utama">
+    <a href="index.html">Home</a>
+    <a href="profil.html">Profil</a>
+    <a href="visi-misi.html">Visi Misi</a>
+    <a href="eskul.html">Eskul</a>
+    <a href="kontak.html" class="active">Kontak</a>
+  </nav>
+
+  <main>
+    <h2>Hubungi Kami</h2>
+
+    <div class="container" role="region" aria-labelledby="kontak-heading">
+      <!-- kolom kiri -->
+      <div class="kiri">
+        <h3 id="kontak-heading">Kontak Sekolah</h3>
+        <p>Silakan hubungi atau ikuti sosial media kami untuk informasi lebih lanjut.</p>
+        <div class="sosmed">
+          <a href="tel:+6281234567890">Telepon: +62 812-3456-7890</a>
+          <a href="mailto:info@sekolah.com">Email: info@sekolah.com</a>
+          <a href="#">Alamat: Jl. Merdeka No.12, Cirebon</a>
+        </div>
+      </div>
+
+      <!-- Kolom kanan -->
+      <div class="kanan">
+        <h3>Kirim Pesan</h3>
+        <form action="#" method="post" aria-label="Formulir kontak">
+          <label for="nama">Nama:</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Masukkan nama"
+            aria-required="true"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="masukkan email@contoh.com"
+            aria-required="true"
+            required
+          />
+
+          <label for="pesan">Pesan:</label>
+          <textarea
+            id="pesan"
+            name="pesan"
+            rows="4"
+            placeholder="Tulis pesan..."
+            aria-required="true"
+            required
+          ></textarea>
+
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; <span id="tahun"></span> SMA Negeri 9 Cirebon. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Set tahun di footer
+    document.getElementById('tahun').textContent = new Date().getFullYear();
+
+    // optional: simple form submit handler (mencegah reload saat demo)
+    document.querySelector('form[method="post"]').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Terima kasih! Pesan Anda telah dikirim (demo).');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
