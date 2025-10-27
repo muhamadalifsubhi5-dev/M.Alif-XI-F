@@ -27,7 +27,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
     height: 70vh;
-    background: url('../IMG-20251005-WA0003.jpg') no-repeat center center/cover;
+    background: url('IMG-20251005-WA0003.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
